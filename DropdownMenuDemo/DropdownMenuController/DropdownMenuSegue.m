@@ -20,10 +20,27 @@
  * THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
+#import "DropdownMenuSegue.h"
+#import "DropdownMenuController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@implementation DropdownMenuSegue
 
-@property (strong, nonatomic) UIWindow *window;
+- (void) perform {
+    DropdownMenuController *tabBarViewController = (DropdownMenuController *) self.sourceViewController;
+    UIViewController *destinationViewController = (UIViewController *) tabBarViewController.destinationViewController;
+
+    //remove old viewController
+    if (tabBarViewController.oldViewController) {
+        [tabBarViewController.oldViewController willMoveToParentViewController:nil];
+        [tabBarViewController.oldViewController.view removeFromSuperview];
+        [tabBarViewController.oldViewController removeFromParentViewController];
+    }
+    
+    destinationViewController.view.frame = tabBarViewController.container.bounds;
+    [tabBarViewController addChildViewController:destinationViewController];
+    [tabBarViewController.container addSubview:destinationViewController.view];
+    [destinationViewController didMoveToParentViewController:tabBarViewController];
+    
+}
 
 @end

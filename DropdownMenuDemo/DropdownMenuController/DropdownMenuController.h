@@ -22,8 +22,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface DropdownMenuController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
+@property (weak,nonatomic) UIViewController *destinationViewController;
+@property (strong, nonatomic) NSString *destinationIdentifier;
+@property (strong, nonatomic) UIViewController *oldViewController;
+@property (weak, nonatomic) IBOutlet UIView *container;
+@property (weak, nonatomic) IBOutlet UIView *menuBar;
+@property (weak, nonatomic) IBOutlet UIView *menu;
+@property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+
+
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tapRecognizer;
+
+- (IBAction) menuButtonAction: (UIButton *) sender;
+- (IBAction) listButtonAction: (UIButton *) sender;
+
+- (void) toggleMenu;
+- (void) showMenu;
+- (void) hideMenu;
 
 @end
