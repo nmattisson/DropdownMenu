@@ -71,7 +71,7 @@
     // Set new alpha of Container View (to get fade effect)
     float containerAlpha = 0.5f;
     
-    [UIView animateWithDuration:0.5
+    [UIView animateWithDuration:0.4
                           delay:0.0
          usingSpringWithDamping:1.0
           initialSpringVelocity:4.0
@@ -94,7 +94,7 @@
     // Set new alpha of Container View (to get fade effect)
     float containerAlpha = 1.0f;
     
-    [UIView animateWithDuration:1.0
+    [UIView animateWithDuration:0.6
                           delay:0.0
          usingSpringWithDamping:1.0
           initialSpringVelocity:4.0
@@ -114,7 +114,7 @@
 - (IBAction)displayGestureForTapRecognizer:(UITapGestureRecognizer *)recognizer {
     // Get the location of the gesture
     CGPoint tapLocation = [recognizer locationInView:self.view];
-    NSLog(@"Tap location X:%1.0f, Y:%1.0f", tapLocation.x, tapLocation.y);
+    // NSLog(@"Tap location X:%1.0f, Y:%1.0f", tapLocation.x, tapLocation.y);
 
     // If menu is open, and the tap is outside of the menu, close it.
     if (!CGRectContainsPoint(self.menu.frame, tapLocation) && !self.menu.hidden) {
