@@ -1,6 +1,6 @@
 # DropdownMenu
 
-<img src="https://raw.github.com/nmattisson/DropdownMenu/master/Screenshots/DropdownMenu.png" width="320" />
+<img src="https://raw.github.com/nmattisson/DropdownMenu/master/Screenshots/DropdownMenu.png" width="400" />
 <img src="https://raw.github.com/nmattisson/DropdownMenu/master/Screenshots/DropdownMenu.gif" width="320" />
 
 DropdownMenu is a navigation controller for setting the view of a ContainerViewController using a dropdown menu (aptly named, no?). Dropdown menus are in many situations superior to the more commonly used slide menu, and can also be a good alternative to tabs when you want to reduce visual distractions yet make less often used functions easily discoverable. This implementation is inspired by the menus used in the iOS7 apps from DropBox and Vine.
