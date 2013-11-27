@@ -1,7 +1,7 @@
 # DropdownMenu
 
-<img src="https://raw.github.com/nmattisson/DropdownMenu/screenshots/DropdownMenu.png" width="320" />
-<img src="https://raw.github.com/nmattisson/DropdownMenu/screenshots/DropdownMenu.gif" width="320" />
+<img src="https://raw.github.com/nmattisson/DropdownMenu/master/Screenshots/DropdownMenu.png" width="320" />
+<img src="https://raw.github.com/nmattisson/DropdownMenu/master/Screenshots/DropdownMenu.gif" width="320" />
 
 DropdownMenu is a navigation controller for setting the view of a ContainerViewController using a dropdown menu (aptly named, no?). Dropdown menus are in many situations superior to the more commonly used slide menu, and can also be a good alternative to tabs when you want to reduce visual distractions yet make less often used functions easily discoverable. This implementation is inspired by the menus used in the iOS7 apps from DropBox and Vine.
 It's built with storyboard, segues and modern APIs and hence requires iOS6+. The project was adapted from Martin Hartl's [MHCustomTabBarController](https://github.com/mhaddl/MHCustomTabBarController) which in turn has lineage from Matthijs Hollemans' [MHTabBarController](https://github.com/hollance/MHTabBarController "MHTabBarController"). Without their prior contributions this would have taken me a lot longer, so thanks guys!
