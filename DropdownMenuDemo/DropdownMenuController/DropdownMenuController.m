@@ -64,8 +64,12 @@
 - (void) showMenu {
     self.menu.hidden = NO;
     
+    // Set new origin of menu
     CGRect menuFrame = self.menu.frame;
     menuFrame.origin.y = self.menuBar.frame.size.height;
+    
+    // Set new alpha of Container View (to get fade effect)
+    float containerAlpha = 0.5f;
     
     [UIView animateWithDuration:0.5
                           delay:0.0
@@ -74,6 +78,7 @@
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          self.menu.frame = menuFrame;
+                         [self.container setAlpha: containerAlpha];
                      }
                      completion:^(BOOL finished){
                      }];
@@ -82,8 +87,12 @@
 }
 
 - (void) hideMenu {
+    // Set new origin of menu
     CGRect menuFrame = self.menu.frame;
     menuFrame.origin.y = self.menuBar.frame.size.height-menuFrame.size.height;
+    
+    // Set new alpha of Container View (to get fade effect)
+    float containerAlpha = 1.0f;
     
     [UIView animateWithDuration:1.0
                           delay:0.0
@@ -92,6 +101,7 @@
                         options: UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.menu.frame = menuFrame;
+                         [self.container setAlpha: containerAlpha];
                      }
                      completion:^(BOOL finished){
                         self.menu.hidden = YES;
