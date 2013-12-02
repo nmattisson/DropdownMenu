@@ -66,7 +66,7 @@
                           delay:0.0
          usingSpringWithDamping:1.0
           initialSpringVelocity:4.0
-                        options: UIViewAnimationOptionCurveEaseIn
+                        options: UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          self.menu.frame = menuFrame;
                          [self.container setAlpha: containerAlpha];
@@ -85,11 +85,11 @@
     // Set new alpha of Container View (to get fade effect)
     float containerAlpha = 1.0f;
     
-    [UIView animateWithDuration:0.6
-                          delay:0.0
+    [UIView animateWithDuration:0.3f
+                          delay:0.05f
          usingSpringWithDamping:1.0
           initialSpringVelocity:4.0
-                        options: UIViewAnimationOptionCurveEaseOut
+                        options: UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          self.menu.frame = menuFrame;
                          [self.container setAlpha: containerAlpha];
