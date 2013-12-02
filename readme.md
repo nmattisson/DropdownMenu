@@ -9,6 +9,8 @@ It's built with storyboard, segues and modern APIs and hence requires iOS6+. The
 ## Usage
 The easiest is to look at the supplied example, and hook up your ViewController the same way. The project relies on a UIViewController of the class 'DropdownMenuController', which needs to contain two UIViews, the 'menuBar' and the 'menu' itself — in addition to the Container View. The menubar view needs to contain the button to toggle the menu, and the actual menu needs to contain the buttons to set the corresponding view in the Container View. Almost everything is controlled in the storyboard, and the outlets are listed below.
 
+The first view that you want shown in the container view must be embedded in the Storyboard. Just ctrl-drag from the container to your first view and choose 'embed'. The buttons in the menu are actual NSButtons and you can style them as you see fit.
+
 ### Outlets
 ```objective-c
 // The Container View
