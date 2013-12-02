@@ -24,14 +24,12 @@
 
 @interface DropdownMenuController : UIViewController
 
-@property (weak,nonatomic) UIViewController *destinationViewController;
-@property (strong, nonatomic) NSString *destinationIdentifier;
-@property (strong, nonatomic) UIViewController *oldViewController;
+@property (weak,nonatomic) UIViewController *currentViewController;
+@property (strong, nonatomic) NSString *currentSegueIdentifier;
 @property (weak, nonatomic) IBOutlet UIView *container;
 @property (weak, nonatomic) IBOutlet UIView *menuBar;
 @property (weak, nonatomic) IBOutlet UIView *menu;
 @property (nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
-
 
 @property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tapRecognizer;
 

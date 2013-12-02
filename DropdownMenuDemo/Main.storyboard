@@ -21,6 +21,9 @@
                                 <rect key="frame" x="0.0" y="70" width="320" height="500"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="xXX-v0-qZJ" kind="embed" id="ghU-4k-QtD"/>
+                                </connections>
                             </containerView>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-ok-V49" userLabel="Menu">
                                 <rect key="frame" x="0.0" y="-132" width="320" height="132"/>
@@ -154,7 +157,7 @@
                         <viewControllerLayoutGuide type="bottom" id="k4e-6t-gyy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dU1-7B-wkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="273" affinity="minY"/>
@@ -162,7 +165,7 @@
                         </userGuides>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ViewController 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYT-wH-Lko">
-                                <rect key="frame" x="98" y="272" width="126" height="21"/>
+                                <rect key="frame" x="98" y="238" width="126" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -248,4 +251,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ghU-4k-QtD"/>
+    </inferredMetricsTieBreakers>
 </document>

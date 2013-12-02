@@ -23,26 +23,17 @@
 #import "DropdownMenuController.h"
 #import "DropdownMenuSegue.h"
 
-@implementation DropdownMenuController {
-    NSMutableDictionary *_viewControllersByIdentifier;
-}
+@implementation DropdownMenuController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _viewControllersByIdentifier = [NSMutableDictionary dictionary];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if (self.childViewControllers.count < 1) {
-        [self performSegueWithIdentifier:@"viewController1" sender:[self.buttons objectAtIndex:0]];
-    }
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    self.destinationViewController.view.frame = self.container.bounds;
+    // Set the current view controller to the one embedded (in the storyboard).
+    self.currentViewController = self.childViewControllers.firstObject;
 }
 
 - (IBAction) menuButtonAction: (UIButton *) sender {
@@ -124,33 +115,15 @@
 
 #pragma mark - Segue
 
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   
-    if (![segue isKindOfClass:[DropdownMenuSegue class]]) {
-        [super prepareForSegue:segue sender:sender];
-        return;
-    }
-    
-    self.oldViewController = self.destinationViewController;
-    
-    //if view controller isn't already contained in the viewControllers-Dictionary
-    if (![_viewControllersByIdentifier objectForKey:segue.identifier]) {
-        [_viewControllersByIdentifier setObject:segue.destinationViewController forKey:segue.identifier];
-    }
-    
-    for (UIButton *aButton in self.buttons) {
-        [aButton setSelected:NO];
-    }
-        
-    UIButton *button = (UIButton *)sender;
-    [button setSelected:YES];
-    self.destinationIdentifier = segue.identifier;
-    self.destinationViewController = [_viewControllersByIdentifier objectForKey:self.destinationIdentifier];
+    self.currentSegueIdentifier = segue.identifier;
+    [super prepareForSegue:segue sender:sender];
     
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    if ([self.destinationIdentifier isEqual:identifier]) {
+    if ([self.currentSegueIdentifier isEqual:identifier]) {
         //Dont perform segue, if visible ViewController is already the destination ViewController
         return NO;
     }
@@ -161,11 +134,7 @@
 #pragma mark - Memory Warning
 
 - (void)didReceiveMemoryWarning {
-    [[_viewControllersByIdentifier allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-        if (![self.destinationIdentifier isEqualToString:key]) {
-            [_viewControllersByIdentifier removeObjectForKey:key];
-        }
-    }];
+
 }
 
 @end

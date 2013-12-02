@@ -26,20 +26,31 @@
 @implementation DropdownMenuSegue
 
 - (void) perform {
-    DropdownMenuController *tabBarViewController = (DropdownMenuController *) self.sourceViewController;
-    UIViewController *destinationViewController = (UIViewController *) tabBarViewController.destinationViewController;
-
-    //remove old viewController
-    if (tabBarViewController.oldViewController) {
-        [tabBarViewController.oldViewController willMoveToParentViewController:nil];
-        [tabBarViewController.oldViewController.view removeFromSuperview];
-        [tabBarViewController.oldViewController removeFromParentViewController];
-    }
+    DropdownMenuController *containerViewController = (DropdownMenuController *) self.sourceViewController;
+    UIViewController *nextViewController = (UIViewController *) self.destinationViewController;
+    UIViewController *currentViewController = (UIViewController *) containerViewController.currentViewController;
     
-    destinationViewController.view.frame = tabBarViewController.container.bounds;
-    [tabBarViewController addChildViewController:destinationViewController];
-    [tabBarViewController.container addSubview:destinationViewController.view];
-    [destinationViewController didMoveToParentViewController:tabBarViewController];
+    // Add nextViewController as child of container view controller.
+    [containerViewController addChildViewController:nextViewController];
+    // Tell current View controller that it will be removed.
+    [currentViewController willMoveToParentViewController:nil];
+    
+    // Set the frame of the next view controller to equal the outgoing (current) view controller
+    nextViewController.view.frame = currentViewController.view.frame;
+    
+    // Make the transition with a very short Cross disolve animation
+    [containerViewController transitionFromViewController:currentViewController
+                                         toViewController:nextViewController
+                                                 duration:0.1f
+                                                  options:UIViewAnimationOptionTransitionCrossDissolve
+                                               animations:^{
+
+                                               }
+                                               completion:^(BOOL finished) {
+                                                   containerViewController.currentViewController = nextViewController;
+                                                   [currentViewController removeFromParentViewController];
+                                                   [nextViewController didMoveToParentViewController:containerViewController];
+                                               }];
     
 }
 
