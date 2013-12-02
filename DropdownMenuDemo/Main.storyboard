@@ -17,19 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODu-xW-Dlh">
-                                <rect key="frame" x="0.0" y="70" width="320" height="500"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODu-xW-Dlh">
+                                <rect key="frame" x="0.0" y="70" width="320" height="498"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="euL-xK-OZI"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="xXX-v0-qZJ" kind="embed" id="ghU-4k-QtD"/>
                                 </connections>
                             </containerView>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-ok-V49" userLabel="Menu">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-ok-V49" userLabel="Menu">
                                 <rect key="frame" x="0.0" y="-132" width="320" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNL-qn-pBt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNL-qn-pBt">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" red="0.039215687659999998" green="0.2823529541" blue="0.41960787770000002" alpha="1" colorSpace="deviceRGB"/>
@@ -50,7 +53,7 @@
                                             <segue destination="xXX-v0-qZJ" kind="custom" identifier="viewController1" customClass="DropdownMenuSegue" id="4QL-4d-TxI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmM-XD-9ls">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmM-XD-9ls">
                                         <rect key="frame" x="0.0" y="43" width="320" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.231372565" green="0.52549022440000004" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
@@ -71,7 +74,7 @@
                                             <segue destination="jIS-Ze-qB0" kind="custom" identifier="viewController2" customClass="DropdownMenuSegue" id="rcG-OM-UGh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-ud-eyb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-ud-eyb">
                                         <rect key="frame" x="0.0" y="86" width="320" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" red="0.47450983520000001" green="0.74117648599999997" blue="0.60392159219999997" alpha="1" colorSpace="deviceRGB"/>
@@ -94,8 +97,18 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QmM-XD-9ls" firstAttribute="top" secondItem="JJ1-ok-V49" secondAttribute="top" constant="43" id="2qZ-cL-zfn"/>
+                                    <constraint firstItem="QmM-XD-9ls" firstAttribute="leading" secondItem="JJ1-ok-V49" secondAttribute="leading" id="8YN-dc-Yfr"/>
+                                    <constraint firstItem="eNL-qn-pBt" firstAttribute="leading" secondItem="JJ1-ok-V49" secondAttribute="leading" id="AZu-qs-gaU"/>
+                                    <constraint firstItem="FSe-ud-eyb" firstAttribute="leading" secondItem="JJ1-ok-V49" secondAttribute="leading" id="HFY-ZV-Phx"/>
+                                    <constraint firstItem="FSe-ud-eyb" firstAttribute="top" secondItem="JJ1-ok-V49" secondAttribute="top" constant="86" id="Kuf-hP-ySo"/>
+                                    <constraint firstItem="eNL-qn-pBt" firstAttribute="top" secondItem="JJ1-ok-V49" secondAttribute="top" id="WLC-eN-X37"/>
+                                    <constraint firstAttribute="width" constant="320" id="Xze-hw-OD9"/>
+                                    <constraint firstAttribute="height" constant="132" id="dJf-Kq-dRU"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x6w-yK-z8E" userLabel="Menu Bar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6w-yK-z8E" userLabel="Menu Bar">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -113,18 +126,26 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HbO-CE-3kL"/>
+                                    <constraint firstAttribute="width" constant="320" id="Ix1-Fc-7iC"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ODu-xW-Dlh" firstAttribute="trailing" secondItem="x6w-yK-z8E" secondAttribute="trailing" id="107-ig-6bL"/>
-                            <constraint firstItem="x6w-yK-z8E" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="7d8-NL-nbN"/>
-                            <constraint firstItem="ODu-xW-Dlh" firstAttribute="top" secondItem="x6w-yK-z8E" secondAttribute="bottom" id="E5D-R5-xPg"/>
-                            <constraint firstItem="ODu-xW-Dlh" firstAttribute="leading" secondItem="x6w-yK-z8E" secondAttribute="leading" id="MlY-YF-1Jy"/>
-                            <constraint firstItem="x6w-yK-z8E" firstAttribute="top" secondItem="3" secondAttribute="top" id="O4Y-vh-7Tu"/>
-                            <constraint firstAttribute="trailing" secondItem="x6w-yK-z8E" secondAttribute="trailing" id="cca-zf-Fcf"/>
-                            <constraint firstAttribute="bottom" secondItem="ODu-xW-Dlh" secondAttribute="bottom" id="rYg-5P-lJi"/>
+                            <constraint firstItem="JJ1-ok-V49" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="Ezl-8i-zyd"/>
+                            <constraint firstItem="ODu-xW-Dlh" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="Fl9-nt-TiW"/>
+                            <constraint firstItem="x6w-yK-z8E" firstAttribute="top" secondItem="3" secondAttribute="top" id="LbU-mp-4Oq"/>
+                            <constraint firstAttribute="bottom" secondItem="ODu-xW-Dlh" secondAttribute="bottom" id="M7O-ET-AZF"/>
+                            <constraint firstItem="JJ1-ok-V49" firstAttribute="top" secondItem="3" secondAttribute="top" constant="-132" id="MCB-Nr-5XD"/>
+                            <constraint firstItem="x6w-yK-z8E" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="Nv6-4d-LuQ"/>
+                            <constraint firstItem="ODu-xW-Dlh" firstAttribute="top" secondItem="x6w-yK-z8E" secondAttribute="bottom" id="aMJ-KG-emu"/>
+                            <constraint firstAttribute="trailing" secondItem="JJ1-ok-V49" secondAttribute="trailing" id="cPh-Mr-712"/>
+                            <constraint firstItem="x6w-yK-z8E" firstAttribute="trailing" secondItem="ODu-xW-Dlh" secondAttribute="trailing" id="fti-aO-dXQ"/>
+                            <constraint firstAttribute="trailing" secondItem="x6w-yK-z8E" secondAttribute="trailing" id="jMJ-j3-XVj"/>
+                            <constraint firstItem="x6w-yK-z8E" firstAttribute="leading" secondItem="ODu-xW-Dlh" secondAttribute="leading" id="msY-EO-9qF"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="3Pw-r5-tx8" appends="YES" id="mIg-hS-KSg"/>
@@ -157,7 +178,7 @@
                         <viewControllerLayoutGuide type="bottom" id="k4e-6t-gyy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dU1-7B-wkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="498"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <userGuides>
                             <userLayoutGuide location="273" affinity="minY"/>
@@ -165,7 +186,7 @@
                         </userGuides>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ViewController 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYT-wH-Lko">
-                                <rect key="frame" x="98" y="238" width="126" height="21"/>
+                                <rect key="frame" x="98" y="237" width="126" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
