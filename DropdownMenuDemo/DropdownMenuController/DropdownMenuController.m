@@ -134,7 +134,7 @@
 #pragma mark - Memory Warning
 
 - (void)didReceiveMemoryWarning {
-
+        [super didReceiveMemoryWarning];
 }
 
 @end
