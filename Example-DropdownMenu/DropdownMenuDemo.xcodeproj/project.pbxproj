@@ -58,11 +58,11 @@
 		29C465EF18450CDE0019C308 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		29C465F018450CDE0019C308 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		29C465F118450CDE0019C308 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		29D65C7F1884110D001AB226 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		29D65C801884110D001AB226 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.md; path = ../readme.md; sourceTree = "<group>"; };
+		29D65C7F1884110D001AB226 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
+		29D65C801884110D001AB226 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.md; path = ../../readme.md; sourceTree = "<group>"; };
 		29D65C811884168D001AB226 /* MyDropdownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDropdownMenuController.h; sourceTree = "<group>"; };
 		29D65C821884168D001AB226 /* MyDropdownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDropdownMenuController.m; sourceTree = "<group>"; };
-		29D65C84188416D6001AB226 /* DropdownMenu.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DropdownMenu.podspec; sourceTree = SOURCE_ROOT; };
+		29D65C84188416D6001AB226 /* DropdownMenu.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = DropdownMenu.podspec; path = ../DropdownMenu.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +159,7 @@
 				29C465E618450BF40019C308 /* DropdownMenuSegue.m */,
 			);
 			name = DropdownMenu;
-			path = ../DropdownMenu;
+			path = ../../DropdownMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
