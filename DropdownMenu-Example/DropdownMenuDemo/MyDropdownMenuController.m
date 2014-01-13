@@ -7,6 +7,7 @@
 //
 
 #import "MyDropdownMenuController.h"
+#import "IonIcons.h"
 
 @interface MyDropdownMenuController ()
 
@@ -27,6 +28,47 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // Customize your menu programmatically here.
+    [self customizeMenu];
+}
+
+-(void) customizeMenu {
+    // EXAMPLE: To set the menubar background colour programmatically.
+    // FYI: There is a bug where the color comes out differently when set programmatically
+    // than when set in XCode Interface builder, and I don't know why.
+    //[self setMenubarBackground:[UIColor greenColor]];
+    
+    // Replace menu button with an IonIcon.
+    [self.menuButton setTitle:nil forState:UIControlStateNormal];
+    [self.menuButton setImage:[IonIcons imageWithIcon:icon_navicon size:30.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
+    
+    // Style menu buttons with IonIcons.
+    for (UIButton *button in self.buttons) {
+        if ([button.titleLabel.text isEqual: @"Profile"]) {
+            [IonIcons labelWithIcon:icon_navicon_round size:15.0f color:[UIColor whiteColor] withLabel:button.titleLabel];
+            [button setImage:[IonIcons imageWithIcon:icon_person size:20.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
+        } else if ([button.titleLabel.text isEqual: @"Home"]) {
+            [IonIcons labelWithIcon:icon_home size:15.0f color:[UIColor whiteColor] withLabel:button.titleLabel];
+            [button setImage:[IonIcons imageWithIcon:icon_home size:20.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
+        } else if ([button.titleLabel.text isEqual: @"Photos"]) {
+            [IonIcons labelWithIcon:icon_image size:15.0f color:[UIColor whiteColor] withLabel:button.titleLabel];
+            [button setImage:[IonIcons imageWithIcon:icon_image size:20.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
+        }
+        
+        // Set the title and icon position
+        [button sizeToFit];
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, -button.imageView.frame.size.width-10, 0, button.imageView.frame.size.width);
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, button.titleLabel.frame.size.width, 0, -button.titleLabel.frame.size.width);
+        
+        // Set color to white
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning

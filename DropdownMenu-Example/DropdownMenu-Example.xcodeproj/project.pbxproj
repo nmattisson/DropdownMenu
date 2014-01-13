@@ -24,6 +24,11 @@
 		29C465F218450CDE0019C308 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C465F018450CDE0019C308 /* AppDelegate.m */; };
 		29C465F318450CDE0019C308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C465F118450CDE0019C308 /* Main.storyboard */; };
 		29D65C831884168D001AB226 /* MyDropdownMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D65C821884168D001AB226 /* MyDropdownMenuController.m */; };
+		29D65C8C18842FF1001AB226 /* IonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D65C8818842FF0001AB226 /* IonIcons.m */; };
+		29D65C8D18842FF1001AB226 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29D65C8918842FF0001AB226 /* ionicons.ttf */; };
+		29D65C8E18842FF1001AB226 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 29D65C8A18842FF1001AB226 /* LICENSE */; };
+		29D65C8F18842FF1001AB226 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 29D65C8B18842FF1001AB226 /* README.md */; };
+		29D65C9218844553001AB226 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D65C9118844553001AB226 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,14 @@
 		29D65C811884168D001AB226 /* MyDropdownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDropdownMenuController.h; sourceTree = "<group>"; };
 		29D65C821884168D001AB226 /* MyDropdownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDropdownMenuController.m; sourceTree = "<group>"; };
 		29D65C84188416D6001AB226 /* DropdownMenu.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = DropdownMenu.podspec; path = ../DropdownMenu.podspec; sourceTree = SOURCE_ROOT; };
+		29D65C8618842FF0001AB226 /* ionicons-codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ionicons-codes.h"; sourceTree = "<group>"; };
+		29D65C8718842FF0001AB226 /* IonIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonIcons.h; sourceTree = "<group>"; };
+		29D65C8818842FF0001AB226 /* IonIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonIcons.m; sourceTree = "<group>"; };
+		29D65C8918842FF0001AB226 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		29D65C8A18842FF1001AB226 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		29D65C8B18842FF1001AB226 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		29D65C9018844553001AB226 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		29D65C9118844553001AB226 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +140,13 @@
 				29C465E218450BF40019C308 /* DropdownMenu */,
 				29D65C811884168D001AB226 /* MyDropdownMenuController.h */,
 				29D65C821884168D001AB226 /* MyDropdownMenuController.m */,
+				29D65C9018844553001AB226 /* MyViewController.h */,
+				29D65C9118844553001AB226 /* MyViewController.m */,
 				29C465EF18450CDE0019C308 /* AppDelegate.h */,
 				29C465F018450CDE0019C308 /* AppDelegate.m */,
 				29C465F118450CDE0019C308 /* Main.storyboard */,
 				29C465C518450BBD0019C308 /* Images.xcassets */,
+				29D65C8518842FF0001AB226 /* ionicons */,
 				29C465B418450BBD0019C308 /* Supporting Files */,
 			);
 			name = "DropdownMenu-Example";
@@ -161,6 +177,19 @@
 			);
 			name = DropdownMenu;
 			path = ../../DropdownMenu;
+			sourceTree = "<group>";
+		};
+		29D65C8518842FF0001AB226 /* ionicons */ = {
+			isa = PBXGroup;
+			children = (
+				29D65C8618842FF0001AB226 /* ionicons-codes.h */,
+				29D65C8718842FF0001AB226 /* IonIcons.h */,
+				29D65C8818842FF0001AB226 /* IonIcons.m */,
+				29D65C8918842FF0001AB226 /* ionicons.ttf */,
+				29D65C8A18842FF1001AB226 /* LICENSE */,
+				29D65C8B18842FF1001AB226 /* README.md */,
+			);
+			path = ionicons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +270,11 @@
 			files = (
 				29C465F318450CDE0019C308 /* Main.storyboard in Resources */,
 				29C465EE18450C0D0019C308 /* Default@2x.png in Resources */,
+				29D65C8E18842FF1001AB226 /* LICENSE in Resources */,
 				29C465C618450BBD0019C308 /* Images.xcassets in Resources */,
 				29C465EC18450C0D0019C308 /* Default-568h@2x.png in Resources */,
+				29D65C8D18842FF1001AB226 /* ionicons.ttf in Resources */,
+				29D65C8F18842FF1001AB226 /* README.md in Resources */,
 				29C465B818450BBD0019C308 /* InfoPlist.strings in Resources */,
 				29C465ED18450C0D0019C308 /* Default.png in Resources */,
 			);
@@ -267,6 +299,8 @@
 				29C465E818450BF40019C308 /* DropdownMenuSegue.m in Sources */,
 				29D65C831884168D001AB226 /* MyDropdownMenuController.m in Sources */,
 				29C465BA18450BBD0019C308 /* main.m in Sources */,
+				29D65C8C18842FF1001AB226 /* IonIcons.m in Sources */,
+				29D65C9218844553001AB226 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

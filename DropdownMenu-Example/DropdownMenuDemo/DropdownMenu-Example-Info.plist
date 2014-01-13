@@ -34,5 +34,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ionicons.ttf</string>
+	</array>
 </dict>
 </plist>
