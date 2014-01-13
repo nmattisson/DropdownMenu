@@ -23,6 +23,7 @@
 		29C465EE18450C0D0019C308 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C465EB18450C0D0019C308 /* Default@2x.png */; };
 		29C465F218450CDE0019C308 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C465F018450CDE0019C308 /* AppDelegate.m */; };
 		29C465F318450CDE0019C308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29C465F118450CDE0019C308 /* Main.storyboard */; };
+		29D65C831884168D001AB226 /* MyDropdownMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D65C821884168D001AB226 /* MyDropdownMenuController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +58,11 @@
 		29C465EF18450CDE0019C308 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		29C465F018450CDE0019C308 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		29C465F118450CDE0019C308 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		29D65C7F1884110D001AB226 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		29D65C801884110D001AB226 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		29D65C7F1884110D001AB226 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		29D65C801884110D001AB226 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = readme.md; path = ../readme.md; sourceTree = "<group>"; };
+		29D65C811884168D001AB226 /* MyDropdownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDropdownMenuController.h; sourceTree = "<group>"; };
+		29D65C821884168D001AB226 /* MyDropdownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDropdownMenuController.m; sourceTree = "<group>"; };
+		29D65C84188416D6001AB226 /* DropdownMenu.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DropdownMenu.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +121,12 @@
 		29C465B318450BBD0019C308 /* DropdownMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				29D65C7F1884110D001AB226 /* LICENSE */,
+				29D65C801884110D001AB226 /* readme.md */,
+				29D65C84188416D6001AB226 /* DropdownMenu.podspec */,
 				29C465E218450BF40019C308 /* DropdownMenu */,
+				29D65C811884168D001AB226 /* MyDropdownMenuController.h */,
+				29D65C821884168D001AB226 /* MyDropdownMenuController.m */,
 				29C465EF18450CDE0019C308 /* AppDelegate.h */,
 				29C465F018450CDE0019C308 /* AppDelegate.m */,
 				29C465F118450CDE0019C308 /* Main.storyboard */,
@@ -144,8 +153,6 @@
 		29C465E218450BF40019C308 /* DropdownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				29D65C7F1884110D001AB226 /* LICENSE */,
-				29D65C801884110D001AB226 /* readme.md */,
 				29C465E318450BF40019C308 /* DropdownMenuController.h */,
 				29C465E418450BF40019C308 /* DropdownMenuController.m */,
 				29C465E518450BF40019C308 /* DropdownMenuSegue.h */,
@@ -257,6 +264,7 @@
 				29C465F218450CDE0019C308 /* AppDelegate.m in Sources */,
 				29C465E718450BF40019C308 /* DropdownMenuController.m in Sources */,
 				29C465E818450BF40019C308 /* DropdownMenuSegue.m in Sources */,
+				29D65C831884168D001AB226 /* MyDropdownMenuController.m in Sources */,
 				29C465BA18450BBD0019C308 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
