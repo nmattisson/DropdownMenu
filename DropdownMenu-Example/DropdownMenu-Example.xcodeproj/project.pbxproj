@@ -37,16 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		29C465AA18450BBD0019C308 /* DropdownMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropdownMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C465AA18450BBD0019C308 /* DropdownMenu-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DropdownMenu-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C465AD18450BBD0019C308 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		29C465AF18450BBD0019C308 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29C465B118450BBD0019C308 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		29C465B518450BBD0019C308 /* DropdownMenuDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropdownMenuDemo-Info.plist"; sourceTree = "<group>"; };
+		29C465B518450BBD0019C308 /* DropdownMenu-Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropdownMenu-Example-Info.plist"; sourceTree = "<group>"; };
 		29C465B718450BBD0019C308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29C465B918450BBD0019C308 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29C465BB18450BBD0019C308 /* DropdownMenuDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropdownMenuDemo-Prefix.pch"; sourceTree = "<group>"; };
+		29C465BB18450BBD0019C308 /* DropdownMenu-Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropdownMenu-Example-Prefix.pch"; sourceTree = "<group>"; };
 		29C465C518450BBD0019C308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		29C465CB18450BBD0019C308 /* DropdownMenuDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropdownMenuDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C465CB18450BBD0019C308 /* DropdownMenu-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DropdownMenu-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C465CC18450BBD0019C308 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		29C465E318450BF40019C308 /* DropdownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenuController.h; sourceTree = "<group>"; };
 		29C465E418450BF40019C308 /* DropdownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownMenuController.m; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		29C465A118450BBD0019C308 = {
 			isa = PBXGroup;
 			children = (
-				29C465B318450BBD0019C308 /* DropdownMenuDemo */,
+				29C465B318450BBD0019C308 /* DropdownMenu-Example */,
 				29C465AC18450BBD0019C308 /* Frameworks */,
 				29C465AB18450BBD0019C308 /* Products */,
 			);
@@ -101,8 +101,8 @@
 		29C465AB18450BBD0019C308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29C465AA18450BBD0019C308 /* DropdownMenuDemo.app */,
-				29C465CB18450BBD0019C308 /* DropdownMenuDemoTests.xctest */,
+				29C465AA18450BBD0019C308 /* DropdownMenu-Example.app */,
+				29C465CB18450BBD0019C308 /* DropdownMenu-ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		29C465B318450BBD0019C308 /* DropdownMenuDemo */ = {
+		29C465B318450BBD0019C308 /* DropdownMenu-Example */ = {
 			isa = PBXGroup;
 			children = (
 				29D65C7F1884110D001AB226 /* LICENSE */,
@@ -133,6 +133,7 @@
 				29C465C518450BBD0019C308 /* Images.xcassets */,
 				29C465B418450BBD0019C308 /* Supporting Files */,
 			);
+			name = "DropdownMenu-Example";
 			path = DropdownMenuDemo;
 			sourceTree = "<group>";
 		};
@@ -142,10 +143,10 @@
 				29C465E918450C0D0019C308 /* Default-568h@2x.png */,
 				29C465EA18450C0D0019C308 /* Default.png */,
 				29C465EB18450C0D0019C308 /* Default@2x.png */,
-				29C465B518450BBD0019C308 /* DropdownMenuDemo-Info.plist */,
+				29C465B518450BBD0019C308 /* DropdownMenu-Example-Info.plist */,
 				29C465B618450BBD0019C308 /* InfoPlist.strings */,
 				29C465B918450BBD0019C308 /* main.m */,
-				29C465BB18450BBD0019C308 /* DropdownMenuDemo-Prefix.pch */,
+				29C465BB18450BBD0019C308 /* DropdownMenu-Example-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -165,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		29C465A918450BBD0019C308 /* DropdownMenuDemo */ = {
+		29C465A918450BBD0019C308 /* DropdownMenu-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29C465DC18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenuDemo" */;
+			buildConfigurationList = 29C465DC18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenu-Example" */;
 			buildPhases = (
 				29C465A618450BBD0019C308 /* Sources */,
 				29C465A718450BBD0019C308 /* Frameworks */,
@@ -177,14 +178,14 @@
 			);
 			dependencies = (
 			);
-			name = DropdownMenuDemo;
+			name = "DropdownMenu-Example";
 			productName = DropdownMenuDemo;
-			productReference = 29C465AA18450BBD0019C308 /* DropdownMenuDemo.app */;
+			productReference = 29C465AA18450BBD0019C308 /* DropdownMenu-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		29C465CA18450BBD0019C308 /* DropdownMenuDemoTests */ = {
+		29C465CA18450BBD0019C308 /* DropdownMenu-ExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29C465DF18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenuDemoTests" */;
+			buildConfigurationList = 29C465DF18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenu-ExampleTests" */;
 			buildPhases = (
 				29C465C718450BBD0019C308 /* Sources */,
 				29C465C818450BBD0019C308 /* Frameworks */,
@@ -195,9 +196,9 @@
 			dependencies = (
 				29C465D118450BBD0019C308 /* PBXTargetDependency */,
 			);
-			name = DropdownMenuDemoTests;
+			name = "DropdownMenu-ExampleTests";
 			productName = DropdownMenuDemoTests;
-			productReference = 29C465CB18450BBD0019C308 /* DropdownMenuDemoTests.xctest */;
+			productReference = 29C465CB18450BBD0019C308 /* DropdownMenu-ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 29C465A518450BBD0019C308 /* Build configuration list for PBXProject "DropdownMenuDemo" */;
+			buildConfigurationList = 29C465A518450BBD0019C308 /* Build configuration list for PBXProject "DropdownMenu-Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,8 +228,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29C465A918450BBD0019C308 /* DropdownMenuDemo */,
-				29C465CA18450BBD0019C308 /* DropdownMenuDemoTests */,
+				29C465A918450BBD0019C308 /* DropdownMenu-Example */,
+				29C465CA18450BBD0019C308 /* DropdownMenu-ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,7 +282,7 @@
 /* Begin PBXTargetDependency section */
 		29C465D118450BBD0019C308 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29C465A918450BBD0019C308 /* DropdownMenuDemo */;
+			target = 29C465A918450BBD0019C308 /* DropdownMenu-Example */;
 			targetProxy = 29C465D018450BBD0019C308 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -376,9 +377,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DropdownMenuDemo/DropdownMenuDemo-Prefix.pch";
-				INFOPLIST_FILE = "DropdownMenuDemo/DropdownMenuDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "DropdownMenuDemo/DropdownMenu-Example-Prefix.pch";
+				INFOPLIST_FILE = "DropdownMenuDemo/DropdownMenu-Example-Info.plist";
+				PRODUCT_NAME = "DropdownMenu-Example";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,9 +390,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DropdownMenuDemo/DropdownMenuDemo-Prefix.pch";
-				INFOPLIST_FILE = "DropdownMenuDemo/DropdownMenuDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "DropdownMenuDemo/DropdownMenu-Example-Prefix.pch";
+				INFOPLIST_FILE = "DropdownMenuDemo/DropdownMenu-Example-Info.plist";
+				PRODUCT_NAME = "DropdownMenu-Example";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -413,7 +414,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "DropdownMenuDemoTests/DropdownMenuDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "DropdownMenu-ExampleTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -432,7 +433,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DropdownMenuDemo/DropdownMenuDemo-Prefix.pch";
 				INFOPLIST_FILE = "DropdownMenuDemoTests/DropdownMenuDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "DropdownMenu-ExampleTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -441,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		29C465A518450BBD0019C308 /* Build configuration list for PBXProject "DropdownMenuDemo" */ = {
+		29C465A518450BBD0019C308 /* Build configuration list for PBXProject "DropdownMenu-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29C465DA18450BBD0019C308 /* Debug */,
@@ -450,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29C465DC18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenuDemo" */ = {
+		29C465DC18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenu-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29C465DD18450BBD0019C308 /* Debug */,
@@ -459,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29C465DF18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenuDemoTests" */ = {
+		29C465DF18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenu-ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29C465E018450BBD0019C308 /* Debug */,
