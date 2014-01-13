@@ -57,6 +57,8 @@
 		29C465EF18450CDE0019C308 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		29C465F018450CDE0019C308 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		29C465F118450CDE0019C308 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		29D65C7F1884110D001AB226 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		29D65C801884110D001AB226 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,6 @@
 		29C465A118450BBD0019C308 = {
 			isa = PBXGroup;
 			children = (
-				29C465E218450BF40019C308 /* DropdownMenuController */,
 				29C465B318450BBD0019C308 /* DropdownMenuDemo */,
 				29C465AC18450BBD0019C308 /* Frameworks */,
 				29C465AB18450BBD0019C308 /* Products */,
@@ -116,6 +117,7 @@
 		29C465B318450BBD0019C308 /* DropdownMenuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				29C465E218450BF40019C308 /* DropdownMenu */,
 				29C465EF18450CDE0019C308 /* AppDelegate.h */,
 				29C465F018450CDE0019C308 /* AppDelegate.m */,
 				29C465F118450CDE0019C308 /* Main.storyboard */,
@@ -139,16 +141,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		29C465E218450BF40019C308 /* DropdownMenuController */ = {
+		29C465E218450BF40019C308 /* DropdownMenu */ = {
 			isa = PBXGroup;
 			children = (
+				29D65C7F1884110D001AB226 /* LICENSE */,
+				29D65C801884110D001AB226 /* readme.md */,
 				29C465E318450BF40019C308 /* DropdownMenuController.h */,
 				29C465E418450BF40019C308 /* DropdownMenuController.m */,
 				29C465E518450BF40019C308 /* DropdownMenuSegue.h */,
 				29C465E618450BF40019C308 /* DropdownMenuSegue.m */,
 			);
-			name = DropdownMenuController;
-			path = DropdownMenuDemo/DropdownMenuController;
+			name = DropdownMenu;
+			path = ../DropdownMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +449,7 @@
 				29C465DE18450BBD0019C308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29C465DF18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenuDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +458,7 @@
 				29C465E118450BBD0019C308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
