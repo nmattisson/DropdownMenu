@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "29C465A918450BBD0019C308"
-               BuildableName = "DropdownMenuDemo.app"
+               BuildableName = "DropdownMenu-Example.app"
                BlueprintName = "DropdownMenu-Example"
                ReferencedContainer = "container:DropdownMenu-Example.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "29C465CA18450BBD0019C308"
-               BuildableName = "DropdownMenuDemoTests.xctest"
+               BuildableName = "DropdownMenu-ExampleTests.xctest"
                BlueprintName = "DropdownMenu-ExampleTests"
                ReferencedContainer = "container:DropdownMenu-Example.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29C465A918450BBD0019C308"
-            BuildableName = "DropdownMenuDemo.app"
+            BuildableName = "DropdownMenu-Example.app"
             BlueprintName = "DropdownMenu-Example"
             ReferencedContainer = "container:DropdownMenu-Example.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29C465A918450BBD0019C308"
-            BuildableName = "DropdownMenuDemo.app"
+            BuildableName = "DropdownMenu-Example.app"
             BlueprintName = "DropdownMenu-Example"
             ReferencedContainer = "container:DropdownMenu-Example.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29C465A918450BBD0019C308"
-            BuildableName = "DropdownMenuDemo.app"
+            BuildableName = "DropdownMenu-Example.app"
             BlueprintName = "DropdownMenu-Example"
             ReferencedContainer = "container:DropdownMenu-Example.xcodeproj">
          </BuildableReference>

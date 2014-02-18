@@ -129,23 +129,25 @@ CAShapeLayer *closedMenuShape;
     // Constants to ease drawing the border and the stroke.
     int height = self.menubar.frame.size.height;
     int width = self.menubar.frame.size.width;
-    int triangleSize = 8;
-    int trianglePosition = 0.87*width;
+    float trianglePlacement = 0.87;
+    int triangleDirection = 1; // 1 for down, -1 for up.
+    int triangleSize =  8;
+    int trianglePosition = trianglePlacement*width;
     
     // The path for the triangle (showing that the menu is open).
     UIBezierPath *triangleShape = [[UIBezierPath alloc] init];
     [triangleShape moveToPoint:CGPointMake(trianglePosition, height)];
-    [triangleShape addLineToPoint:CGPointMake(trianglePosition+triangleSize, height-triangleSize)];
+    [triangleShape addLineToPoint:CGPointMake(trianglePosition+triangleSize, height+triangleDirection*triangleSize)];
     [triangleShape addLineToPoint:CGPointMake(trianglePosition+2*triangleSize, height)];
     [triangleShape addLineToPoint:CGPointMake(trianglePosition, height)];
     
     [openMenuShape setPath:triangleShape.CGPath];
-    //[openMenuShape setFillColor:[self.menubar.backgroundColor CGColor]];
-    [openMenuShape setFillColor:[self.menu.backgroundColor CGColor]];
+    [openMenuShape setFillColor:[self.menubar.backgroundColor CGColor]];
+    //[openMenuShape setFillColor:[self.menu.backgroundColor CGColor]];
     UIBezierPath *borderPath = [[UIBezierPath alloc] init];
     [borderPath moveToPoint:CGPointMake(0, height)];
     [borderPath addLineToPoint:CGPointMake(trianglePosition, height)];
-    [borderPath addLineToPoint:CGPointMake(trianglePosition+triangleSize, height-triangleSize)];
+    [borderPath addLineToPoint:CGPointMake(trianglePosition+triangleSize, height+triangleDirection*triangleSize)];
     [borderPath addLineToPoint:CGPointMake(trianglePosition+2*triangleSize, height)];
     [borderPath addLineToPoint:CGPointMake(width, height)];
     
