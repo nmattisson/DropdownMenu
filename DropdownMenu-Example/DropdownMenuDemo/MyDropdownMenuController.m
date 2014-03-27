@@ -50,13 +50,13 @@
     // Style menu buttons with IonIcons.
     for (UIButton *button in self.buttons) {
         if ([button.titleLabel.text isEqual: @"Profile"]) {
-            [IonIcons labelWithIcon:icon_navicon_round size:15.0f color:[UIColor whiteColor] withLabel:button.titleLabel];
+            [IonIcons label:button.titleLabel setIcon:icon_navicon_round size:15.0f color:[UIColor whiteColor] sizeToFit:NO];
             [button setImage:[IonIcons imageWithIcon:icon_person size:20.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
         } else if ([button.titleLabel.text isEqual: @"Home"]) {
-            [IonIcons labelWithIcon:icon_home size:15.0f color:[UIColor whiteColor] withLabel:button.titleLabel];
+            [IonIcons label:button.titleLabel setIcon:icon_home size:15.0f color:[UIColor whiteColor] sizeToFit:NO];
             [button setImage:[IonIcons imageWithIcon:icon_home size:20.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
         } else if ([button.titleLabel.text isEqual: @"Photos"]) {
-            [IonIcons labelWithIcon:icon_image size:15.0f color:[UIColor whiteColor] withLabel:button.titleLabel];
+            [IonIcons label:button.titleLabel setIcon:icon_image size:15.0f color:[UIColor whiteColor] sizeToFit:NO];
             [button setImage:[IonIcons imageWithIcon:icon_image size:20.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
         }
         

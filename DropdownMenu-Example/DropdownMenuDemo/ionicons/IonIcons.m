@@ -25,26 +25,23 @@
                     color:(UIColor*)color
 {
     UILabel *label = [[UILabel alloc] init];
-    label.font = [IonIcons fontWithSize:size];
-    label.text = icon_name;
-    label.textColor = color;
-    label.backgroundColor = [UIColor clearColor];
-    [label sizeToFit];
-    // NOTE: ionicons will be silent through VoiceOver, but the Label is still selectable through VoiceOver. This can cause a usability issue because a visually impaired user might navigate to the label but get no audible feedback that the navigation happened. So hide the label for VoiceOver by default - if your label should be descriptive, un-hide it explicitly after creating it, and then set its accessibiltyLabel.
-    label.accessibilityElementsHidden = YES;
+    [IonIcons label:label setIcon:icon_name size:size color:color sizeToFit:YES];
     return label;
 }
 
-+ (void)labelWithIcon:(NSString*)icon_name
-                 size:(CGFloat)size
-                color:(UIColor*)color
-            withLabel:(UILabel*)label
++ (void)label:(UILabel*)label
+      setIcon:(NSString*)icon_name
+         size:(CGFloat)size
+        color:(UIColor*)color
+    sizeToFit:(BOOL)shouldSizeToFit
 {
     label.font = [IonIcons fontWithSize:size];
     label.text = icon_name;
     label.textColor = color;
     label.backgroundColor = [UIColor clearColor];
-    [label sizeToFit];
+    if (shouldSizeToFit) {
+        [label sizeToFit];
+    }
     // NOTE: ionicons will be silent through VoiceOver, but the Label is still selectable through VoiceOver. This can cause a usability issue because a visually impaired user might navigate to the label but get no audible feedback that the navigation happened. So hide the label for VoiceOver by default - if your label should be descriptive, un-hide it explicitly after creating it, and then set its accessibiltyLabel.
     label.accessibilityElementsHidden = YES;
 }

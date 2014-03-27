@@ -15,35 +15,35 @@
 // Font and Label Methods
 //================================
 
-/*  Convenience method to get the ionicons font.
+/*! Convenience method to get the ionicons font.
  */
 + (UIFont*)fontWithSize:(CGFloat)size;
 
-/*  Convenience method to make a sized-to-fit UILabel containing an icon in the given font size and color.
+/*!  Convenience method to make a sized-to-fit UILabel containing an icon in the given font size and color.
  */
 + (UILabel*)labelWithIcon:(NSString*)icon_name
                      size:(CGFloat)size
                     color:(UIColor*)color;
 
-/*  Convenience method to make an existing UILabel sized-to-fit with an icon in the given font size and color.
+/*! Adjust an existing UILabel to show an ionicon.
  */
-+ (void)labelWithIcon:(NSString*)icon_name
-                 size:(CGFloat)size
-                color:(UIColor*)color
-            withLabel:(UILabel*)label;
-
++ (void)label:(UILabel*)label
+      setIcon:(NSString*)icon_name
+         size:(CGFloat)size
+        color:(UIColor*)color
+    sizeToFit:(BOOL)shouldSizeToFit;
 
 //================================
 // Image Methods
 //================================
 
-/* Make the image and icon the same size:
+/*! Create a UIImage of an ionocin, making the image and the icon the same size:
  */
 + (UIImage*)imageWithIcon:(NSString*)icon_name
                      size:(CGFloat)size
                     color:(UIColor*)color;
 
-/* The image and the icon inside it can be configured to different sizes:
+/*! Create a UIImage of an ionocin, and specify different sizes for the image and the icon:
  */
 + (UIImage*)imageWithIcon:(NSString*)icon_name
                 iconColor:(UIColor*)color
