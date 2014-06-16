@@ -23,6 +23,14 @@
 #import "DropdownMenuController.h"
 #import "DropdownMenuSegue.h"
 
+
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
+
+@interface DropdownMenuController()
+- (void)iOS6_hideMenuCompleted;
+@end
+
 @implementation DropdownMenuController
 
 CAShapeLayer *openMenuShape;
@@ -80,17 +88,25 @@ CAShapeLayer *closedMenuShape;
     // Set new alpha of Container View (to get fade effect)
     float containerAlpha = 0.5f;
     
-    [UIView animateWithDuration:0.4
-                          delay:0.0
-         usingSpringWithDamping:1.0
-          initialSpringVelocity:4.0
-                        options: UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         self.menu.frame = menuFrame;
-                         [self.container setAlpha: containerAlpha];
-                     }
-                     completion:^(BOOL finished){
-                     }];
+	if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+		[UIView beginAnimations:nil context:nil];
+		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+		self.menu.frame = menuFrame;
+		[self.container setAlpha:containerAlpha];
+	} else {
+		[UIView animateWithDuration:0.4
+							  delay:0.0
+			 usingSpringWithDamping:1.0
+			  initialSpringVelocity:4.0
+							options: UIViewAnimationOptionCurveEaseInOut
+						 animations:^{
+							 self.menu.frame = menuFrame;
+							 [self.container setAlpha: containerAlpha];
+						 }
+						 completion:^(BOOL finished){
+						 }];
+	}
+	
     [UIView commitAnimations];
 
 }
@@ -107,21 +123,37 @@ CAShapeLayer *closedMenuShape;
     // Set new alpha of Container View (to get fade effect)
     float containerAlpha = 1.0f;
     
-    [UIView animateWithDuration:0.3f
-                          delay:0.05f
-         usingSpringWithDamping:1.0
-          initialSpringVelocity:4.0
-                        options: UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         self.menu.frame = menuFrame;
-                         [self.container setAlpha: containerAlpha];
-                     }
-                     completion:^(BOOL finished){
-                         self.menu.hidden = YES;
-                     }];
+	if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+		[UIView beginAnimations:nil context:nil];
+		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+		[UIView setAnimationDelegate:self];
+		[UIView setAnimationDidStopSelector:@selector(iOS6_hideMenuCompleted)];
+
+		self.menu.frame = menuFrame;
+		[self.container setAlpha:containerAlpha];
+	} else {
+		[UIView animateWithDuration:0.3f
+							  delay:0.05f
+			 usingSpringWithDamping:1.0
+			  initialSpringVelocity:4.0
+							options: UIViewAnimationOptionCurveEaseInOut
+						 animations:^{
+							 self.menu.frame = menuFrame;
+							 [self.container setAlpha: containerAlpha];
+						 }
+						 completion:^(BOOL finished){
+							 self.menu.hidden = YES;
+						 }];
+	}
+	
     [UIView commitAnimations];
     
 }
+
+- (void)iOS6_hideMenuCompleted {
+	self.menu.hidden = YES;
+}
+
 
 - (void) drawOpenLayer {
     openMenuShape = [CAShapeLayer layer];
