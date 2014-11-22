@@ -50,6 +50,12 @@
     //Uncomment to stop drop 'Triangle' from appearing
     //[self dropShapeShouldShowWhenOpen:NO];
     
+    //Uncomment to fade to white instead of default (black)
+    //[self setFadeTintWithColor:[UIColor whiteColor]];
+    
+    //Uncomment for increased fade effect (default is 0.5f)
+    //[self setFadeAmountWithAlpha:0.2f];
+    
     // Style menu buttons with IonIcons.
     for (UIButton *button in self.buttons) {
         if ([button.titleLabel.text isEqual: @"Profile"]) {
