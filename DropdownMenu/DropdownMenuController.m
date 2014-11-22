@@ -31,16 +31,21 @@
 - (void)iOS6_hideMenuCompleted;
 @end
 
-@implementation DropdownMenuController
+@implementation DropdownMenuController {
+    bool shouldDisplayDropShape;
+    float fadeAlpha;
+}
 
 CAShapeLayer *openMenuShape;
 CAShapeLayer *closedMenuShape;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    shouldDisplayDropShape = YES;
+    fadeAlpha = 0.5f;
 }
 
--(void) viewDidAppear:(BOOL)animated {
+- (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     // Set the current view controller to the one embedded (in the storyboard).
@@ -49,6 +54,21 @@ CAShapeLayer *closedMenuShape;
     // Draw the shapes for the open and close menu triangle.
     [self drawOpenLayer];
     [self drawClosedLayer];
+}
+
+//Enables/Disables the 'drop' triangle from displaying when down
+- (void) dropShapeShouldShowWhenOpen:(BOOL)shouldShow {
+    shouldDisplayDropShape = shouldShow;
+}
+
+//Sets the color that background content will fade to when the menu is open
+- (void) setFadeTintWithColor:(UIColor *) color {
+    self.view.backgroundColor = color;
+}
+
+//Sets the amount of fade that should be applied to background content when menu is open
+- (void) setFadeAmountWithAlpha:(float) alphaVal {
+    fadeAlpha = alphaVal;
 }
 
 - (void) setMenubarTitle:(NSString *) menubarTitle {
@@ -79,14 +99,18 @@ CAShapeLayer *closedMenuShape;
     self.menu.hidden = NO;
     
     [closedMenuShape removeFromSuperlayer];
-    [[[self view] layer] addSublayer:openMenuShape];
+    
+    if (shouldDisplayDropShape)
+    {
+        [[[self view] layer] addSublayer:openMenuShape];
+    }
     
     // Set new origin of menu
     CGRect menuFrame = self.menu.frame;
     menuFrame.origin.y = self.menubar.frame.size.height;
     
     // Set new alpha of Container View (to get fade effect)
-    float containerAlpha = 0.5f;
+    float containerAlpha = fadeAlpha;
     
 	if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
 		[UIView beginAnimations:nil context:nil];
