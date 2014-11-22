@@ -58,6 +58,11 @@ These are the functions you can call from your View Controllers to set the curre
 // Actions for the menu button (show/hide menu) and list button (option in dropdown menu).
 - (IBAction) menuButtonAction: (UIButton *) sender;
 - (IBAction) listButtonAction: (UIButton *) sender;
+
+// Menu display options.
+- (void) dropShapeShouldShowWhenOpen: (BOOL) shouldShow;
+- (void) setFadeAmountWithAlpha: (float) alphaVal;
+- (void) setFadeTintWithColor: (UIColor *) color;
 ```
 
 
