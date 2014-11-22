@@ -37,6 +37,7 @@
 - (IBAction) menuButtonAction: (UIButton *) sender;
 - (IBAction) listButtonAction: (UIButton *) sender;
 
+- (void) dropShapeShouldShowWhenOpen:(BOOL)shouldShow;
 - (void) setMenubarTitle:(NSString *) menubarTitle;
 - (void) setMenubarBackground:(UIColor *) color;
 - (void) toggleMenu;

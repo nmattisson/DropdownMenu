@@ -47,6 +47,9 @@
     [self.menuButton setTitle:nil forState:UIControlStateNormal];
     [self.menuButton setImage:[IonIcons imageWithIcon:icon_navicon size:30.0f color:[UIColor whiteColor]] forState:UIControlStateNormal];
     
+    //Uncomment to stop drop 'Triangle' from appearing
+    //[self dropShapeShouldShowWhenOpen:NO];
+    
     // Style menu buttons with IonIcons.
     for (UIButton *button in self.buttons) {
         if ([button.titleLabel.text isEqual: @"Profile"]) {

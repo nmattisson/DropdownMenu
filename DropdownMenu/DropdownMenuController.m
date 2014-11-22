@@ -31,16 +31,19 @@
 - (void)iOS6_hideMenuCompleted;
 @end
 
-@implementation DropdownMenuController
+@implementation DropdownMenuController {
+    bool shouldDisplayDropShape;
+}
 
 CAShapeLayer *openMenuShape;
 CAShapeLayer *closedMenuShape;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    shouldDisplayDropShape = YES;
 }
 
--(void) viewDidAppear:(BOOL)animated {
+- (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     // Set the current view controller to the one embedded (in the storyboard).
@@ -49,6 +52,11 @@ CAShapeLayer *closedMenuShape;
     // Draw the shapes for the open and close menu triangle.
     [self drawOpenLayer];
     [self drawClosedLayer];
+}
+
+//Enables/Disables the 'drop' triangle from displaying when down
+- (void) dropShapeShouldShowWhenOpen:(BOOL)shouldShow {
+    shouldDisplayDropShape = shouldShow;
 }
 
 - (void) setMenubarTitle:(NSString *) menubarTitle {
@@ -79,7 +87,11 @@ CAShapeLayer *closedMenuShape;
     self.menu.hidden = NO;
     
     [closedMenuShape removeFromSuperlayer];
-    [[[self view] layer] addSublayer:openMenuShape];
+    
+    if (shouldDisplayDropShape)
+    {
+        [[[self view] layer] addSublayer:openMenuShape];
+    }
     
     // Set new origin of menu
     CGRect menuFrame = self.menu.frame;
