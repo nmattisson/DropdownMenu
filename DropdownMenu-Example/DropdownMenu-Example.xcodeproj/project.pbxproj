@@ -13,9 +13,6 @@
 		29C465B818450BBD0019C308 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29C465B618450BBD0019C308 /* InfoPlist.strings */; };
 		29C465BA18450BBD0019C308 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C465B918450BBD0019C308 /* main.m */; };
 		29C465C618450BBD0019C308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29C465C518450BBD0019C308 /* Images.xcassets */; };
-		29C465CD18450BBD0019C308 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C465CC18450BBD0019C308 /* XCTest.framework */; };
-		29C465CE18450BBD0019C308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C465AD18450BBD0019C308 /* Foundation.framework */; };
-		29C465CF18450BBD0019C308 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C465B118450BBD0019C308 /* UIKit.framework */; };
 		29C465E718450BF40019C308 /* DropdownMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C465E418450BF40019C308 /* DropdownMenuController.m */; };
 		29C465E818450BF40019C308 /* DropdownMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C465E618450BF40019C308 /* DropdownMenuSegue.m */; };
 		29C465EC18450C0D0019C308 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C465E918450C0D0019C308 /* Default-568h@2x.png */; };
@@ -31,16 +28,6 @@
 		29D65C9218844553001AB226 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D65C9118844553001AB226 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		29C465D018450BBD0019C308 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29C465A218450BBD0019C308 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 29C465A918450BBD0019C308;
-			remoteInfo = DropdownMenuDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		29C465AA18450BBD0019C308 /* DropdownMenu-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DropdownMenu-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C465AD18450BBD0019C308 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,8 +38,6 @@
 		29C465B918450BBD0019C308 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29C465BB18450BBD0019C308 /* DropdownMenu-Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropdownMenu-Example-Prefix.pch"; sourceTree = "<group>"; };
 		29C465C518450BBD0019C308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		29C465CB18450BBD0019C308 /* DropdownMenu-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DropdownMenu-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		29C465CC18450BBD0019C308 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		29C465E318450BF40019C308 /* DropdownMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenuController.h; sourceTree = "<group>"; };
 		29C465E418450BF40019C308 /* DropdownMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownMenuController.m; sourceTree = "<group>"; };
 		29C465E518450BF40019C308 /* DropdownMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenuSegue.h; sourceTree = "<group>"; };
@@ -89,16 +74,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29C465C818450BBD0019C308 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29C465CD18450BBD0019C308 /* XCTest.framework in Frameworks */,
-				29C465CF18450BBD0019C308 /* UIKit.framework in Frameworks */,
-				29C465CE18450BBD0019C308 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				29C465AA18450BBD0019C308 /* DropdownMenu-Example.app */,
-				29C465CB18450BBD0019C308 /* DropdownMenu-ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +100,6 @@
 				29C465AD18450BBD0019C308 /* Foundation.framework */,
 				29C465AF18450BBD0019C308 /* CoreGraphics.framework */,
 				29C465B118450BBD0019C308 /* UIKit.framework */,
-				29C465CC18450BBD0019C308 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,24 +185,6 @@
 			productReference = 29C465AA18450BBD0019C308 /* DropdownMenu-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		29C465CA18450BBD0019C308 /* DropdownMenu-ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 29C465DF18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenu-ExampleTests" */;
-			buildPhases = (
-				29C465C718450BBD0019C308 /* Sources */,
-				29C465C818450BBD0019C308 /* Frameworks */,
-				29C465C918450BBD0019C308 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				29C465D118450BBD0019C308 /* PBXTargetDependency */,
-			);
-			name = "DropdownMenu-ExampleTests";
-			productName = DropdownMenuDemoTests;
-			productReference = 29C465CB18450BBD0019C308 /* DropdownMenu-ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -238,11 +193,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Nils Mattisson";
-				TargetAttributes = {
-					29C465CA18450BBD0019C308 = {
-						TestTargetID = 29C465A918450BBD0019C308;
-					};
-				};
 			};
 			buildConfigurationList = 29C465A518450BBD0019C308 /* Build configuration list for PBXProject "DropdownMenu-Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -258,7 +208,6 @@
 			projectRoot = "";
 			targets = (
 				29C465A918450BBD0019C308 /* DropdownMenu-Example */,
-				29C465CA18450BBD0019C308 /* DropdownMenu-ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,13 +229,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29C465C918450BBD0019C308 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,22 +246,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29C465C718450BBD0019C308 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		29C465D118450BBD0019C308 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 29C465A918450BBD0019C308 /* DropdownMenu-Example */;
-			targetProxy = 29C465D018450BBD0019C308 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		29C465B618450BBD0019C308 /* InfoPlist.strings */ = {
@@ -431,46 +358,6 @@
 			};
 			name = Release;
 		};
-		29C465E018450BBD0019C308 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropdownMenuDemo.app/DropdownMenuDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DropdownMenuDemo/DropdownMenuDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "DropdownMenuDemoTests/DropdownMenuDemoTests-Info.plist";
-				PRODUCT_NAME = "DropdownMenu-ExampleTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		29C465E118450BBD0019C308 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropdownMenuDemo.app/DropdownMenuDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DropdownMenuDemo/DropdownMenuDemo-Prefix.pch";
-				INFOPLIST_FILE = "DropdownMenuDemoTests/DropdownMenuDemoTests-Info.plist";
-				PRODUCT_NAME = "DropdownMenu-ExampleTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -488,15 +375,6 @@
 			buildConfigurations = (
 				29C465DD18450BBD0019C308 /* Debug */,
 				29C465DE18450BBD0019C308 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		29C465DF18450BBD0019C308 /* Build configuration list for PBXNativeTarget "DropdownMenu-ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				29C465E018450BBD0019C308 /* Debug */,
-				29C465E118450BBD0019C308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
