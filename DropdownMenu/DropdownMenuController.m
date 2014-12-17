@@ -34,6 +34,7 @@
 @implementation DropdownMenuController {
     bool shouldDisplayDropShape;
     float fadeAlpha;
+    float trianglePlacement;
 }
 
 CAShapeLayer *openMenuShape;
@@ -43,6 +44,7 @@ CAShapeLayer *closedMenuShape;
     [super viewDidLoad];
     shouldDisplayDropShape = YES;
     fadeAlpha = 0.5f;
+    trianglePlacement = 0.87f;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -69,6 +71,10 @@ CAShapeLayer *closedMenuShape;
 //Sets the amount of fade that should be applied to background content when menu is open
 - (void) setFadeAmountWithAlpha:(float) alphaVal {
     fadeAlpha = alphaVal;
+}
+
+- (void) setTrianglePlacement: (float) trianglePlacementVal {
+    trianglePlacement = trianglePlacementVal;
 }
 
 - (void) setMenubarTitle:(NSString *) menubarTitle {
@@ -185,7 +191,6 @@ CAShapeLayer *closedMenuShape;
     // Constants to ease drawing the border and the stroke.
     int height = self.menubar.frame.size.height;
     int width = self.menubar.frame.size.width;
-    float trianglePlacement = 0.87;
     int triangleDirection = 1; // 1 for down, -1 for up.
     int triangleSize =  8;
     int trianglePosition = trianglePlacement*width;

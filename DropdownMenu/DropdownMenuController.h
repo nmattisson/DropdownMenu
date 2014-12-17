@@ -37,6 +37,7 @@
 - (IBAction) menuButtonAction: (UIButton *) sender;
 - (IBAction) listButtonAction: (UIButton *) sender;
 
+- (void) setTrianglePlacement: (float) trianglePlacementVal;
 - (void) setFadeAmountWithAlpha:(float) alphaVal;
 - (void) setFadeTintWithColor:(UIColor *) color;
 - (void) dropShapeShouldShowWhenOpen:(BOOL)shouldShow;
