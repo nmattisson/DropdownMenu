@@ -36,7 +36,9 @@
     [currentViewController willMoveToParentViewController:nil];
     
     // Set the frame of the next view controller to equal the outgoing (current) view controller
+    nextViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     nextViewController.view.frame = currentViewController.view.frame;
+    nextViewController.view.translatesAutoresizingMaskIntoConstraints = YES;
     
     // Make the transition with a very short Cross disolve animation
     [containerViewController transitionFromViewController:currentViewController
