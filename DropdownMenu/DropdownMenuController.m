@@ -28,7 +28,11 @@
 
 
 @interface DropdownMenuController()
+
+@property (nonatomic, readonly) CGFloat offset;
+
 - (void)iOS6_hideMenuCompleted;
+
 @end
 
 @implementation DropdownMenuController {
@@ -113,7 +117,7 @@ CAShapeLayer *closedMenuShape;
     
     // Set new origin of menu
     CGRect menuFrame = self.menu.frame;
-    menuFrame.origin.y = self.menubar.frame.size.height;
+    menuFrame.origin.y = self.menubar.frame.size.height-self.offset;
     
     // Set new alpha of Container View (to get fade effect)
     float containerAlpha = fadeAlpha;
@@ -185,7 +189,13 @@ CAShapeLayer *closedMenuShape;
 }
 
 
+-(CGFloat)offset {
+    return UIInterfaceOrientationIsLandscape(self.interfaceOrientation) ? 20.0f : 0.0f;
+}
+
+
 - (void) drawOpenLayer {
+    [openMenuShape removeFromSuperlayer];
     openMenuShape = [CAShapeLayer layer];
     
     // Constants to ease drawing the border and the stroke.
@@ -217,10 +227,11 @@ CAShapeLayer *closedMenuShape;
     
     [openMenuShape setBounds:CGRectMake(0.0f, 0.0f, height+triangleSize, width)];
     [openMenuShape setAnchorPoint:CGPointMake(0.0f, 0.0f)];
-    [openMenuShape setPosition:CGPointMake(0.0f, 0.0f)];
+    [openMenuShape setPosition:CGPointMake(0.0f, -self.offset)];
 }
 
 - (void) drawClosedLayer {
+    [closedMenuShape removeFromSuperlayer];
     closedMenuShape = [CAShapeLayer layer];
     
     // Constants to ease drawing the border and the stroke.
@@ -237,7 +248,7 @@ CAShapeLayer *closedMenuShape;
     
     [closedMenuShape setBounds:CGRectMake(0.0f, 0.0f, height, width)];
     [closedMenuShape setAnchorPoint:CGPointMake(0.0f, 0.0f)];
-    [closedMenuShape setPosition:CGPointMake(0.0f, 0.0f)];
+    [closedMenuShape setPosition:CGPointMake(0.0f, -self.offset)];
 }
 
 - (IBAction)displayGestureForTapRecognizer:(UITapGestureRecognizer *)recognizer {
@@ -249,6 +260,34 @@ CAShapeLayer *closedMenuShape;
     if (!CGRectContainsPoint(self.menu.frame, tapLocation) && !self.menu.hidden) {
         [self hideMenu];
     }
+}
+
+#pragma mark - Rotation
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+
+    CGRect menuFrame = self.menu.frame;
+    menuFrame.origin.y = self.menubar.frame.size.height - self.offset;
+    self.menu.frame = menuFrame;
+
+    [self drawClosedLayer];
+    [self drawOpenLayer];
+
+    if (self.menu.hidden) {
+        [[[self view] layer] addSublayer:closedMenuShape];
+    } else {
+        if (shouldDisplayDropShape) {
+            [[[self view] layer] addSublayer:openMenuShape];
+        }
+    }
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+
+    [closedMenuShape removeFromSuperlayer];
+    [openMenuShape removeFromSuperlayer];
 }
 
 #pragma mark - Segue
