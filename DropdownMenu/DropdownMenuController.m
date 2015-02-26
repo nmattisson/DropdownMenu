@@ -107,6 +107,7 @@ CAShapeLayer *closedMenuShape;
 
 - (void) showMenu {
     self.menu.hidden = NO;
+    self.menu.translatesAutoresizingMaskIntoConstraints = YES;
     
     [closedMenuShape removeFromSuperlayer];
     
