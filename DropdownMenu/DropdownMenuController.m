@@ -25,6 +25,7 @@
 
 
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 
 
 @interface DropdownMenuController()
@@ -191,7 +192,17 @@ CAShapeLayer *closedMenuShape;
 
 
 -(CGFloat)offset {
-    return UIInterfaceOrientationIsLandscape(self.interfaceOrientation) ? 20.0f : 0.0f;
+    UIInterfaceOrientation interfaceOrientation;
+    
+    // Check if we are running an iOS version that support `interfaceOrientation`
+    // Otherwise, use statusBarOrientation.
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+        interfaceOrientation = self.interfaceOrientation;
+    } else {
+        interfaceOrientation = [UIApplication sharedApplication].statusBarOrientation;
+    }
+    
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation) ? 20.0f : 0.0f;
 }
 
 
