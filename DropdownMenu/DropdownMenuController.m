@@ -192,6 +192,10 @@ CAShapeLayer *closedMenuShape;
 
 
 -(CGFloat)offset {
+    return ([self isLandscape] && !SYSTEM_VERSION_LESS_THAN(@"8.0")) ? 20.0f : 0.0f;
+}
+
+-(bool)isLandscape {
     UIInterfaceOrientation interfaceOrientation;
     
     // Check if we are running an iOS version that support `interfaceOrientation`
@@ -202,9 +206,15 @@ CAShapeLayer *closedMenuShape;
         interfaceOrientation = [UIApplication sharedApplication].statusBarOrientation;
     }
     
-    return UIInterfaceOrientationIsLandscape(interfaceOrientation) ? 20.0f : 0.0f;
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
+-(CGFloat)correctWidth {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat max = MAX(screenRect.size.width, screenRect.size.height);
+    CGFloat min = MIN(screenRect.size.width, screenRect.size.height);
+    return [self isLandscape] ? max : min;
+}
 
 - (void) drawOpenLayer {
     [openMenuShape removeFromSuperlayer];
@@ -281,6 +291,7 @@ CAShapeLayer *closedMenuShape;
 
     CGRect menuFrame = self.menu.frame;
     menuFrame.origin.y = self.menubar.frame.size.height - self.offset;
+    menuFrame.size.width = [self correctWidth];
     self.menu.frame = menuFrame;
 
     [self drawClosedLayer];
